@@ -1,8 +1,9 @@
+import RouteApp from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <p>Projeto Flix</p>
+     <RouteApp />
     </div>
   );
 }
