@@ -1,0 +1,34 @@
+
+.container-itens {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  height: 50px;
+  margin: 10px 0;
+  cursor: pointer;
+  align-items: center;
+  border-bottom: 1px solid #cccccc28;
+
+}
+
+.item {
+  color: #ccc;
+  padding: 10px;
+}
+
+.item:hover {
+    border-radius: 15px;
+    background-color: #cccccc28;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png');
+  background-size: cover;   
+  background-repeat: no-repeat;
+  filter: grayscale(100%);  
+}
+
+
+

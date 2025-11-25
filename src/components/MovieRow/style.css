@@ -1,0 +1,78 @@
+.movieRow {
+  position: relative;
+  align-items: center;
+  margin: 20px 0;
+  border-top: 1px solid #cccccc28;
+}
+
+.movieRow h2 {
+  margin-left: 20px;
+  color: #fff;
+}
+
+/* Área que rola */
+.row-posters {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-poster {
+  width: 160px;
+  height: 240px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.row-poster:hover {
+  transform: scale(1.2);
+  border-radius: 6px;
+  z-index: 10px;
+  border: 1px solid #fff;
+  
+}
+
+.poster-item {
+  text-align: center;
+}
+
+.btn-acessar {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- SETAS --- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.arrow.left {
+  left: 5px;
+}
+
+.arrow.right {
+  right: 5px;
+}
+
+.arrow:hover {
+  background-color: rgba(0,0,0,0.7);
+}
