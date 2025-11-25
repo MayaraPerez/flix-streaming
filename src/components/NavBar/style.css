@@ -1,4 +1,3 @@
-
 .container-itens {
   display: flex;
   gap: 10px;
@@ -8,7 +7,6 @@
   cursor: pointer;
   align-items: center;
   border-bottom: 1px solid #cccccc28;
-
 }
 
 .item {
@@ -17,18 +15,15 @@
 }
 
 .item:hover {
-    border-radius: 15px;
-    background-color: #cccccc28;
+  border-radius: 15px;
+  background-color: #cccccc28;
 }
 
 .search-icon {
   width: 20px;
   height: 20px;
-  background-image: url('https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png');
-  background-size: cover;   
+  background-image: url("https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  filter: grayscale(100%);  
+  filter: grayscale(100%);
 }
-
-
-

@@ -1,13 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { GetAllMovies } from "../../services/movie";
-import { scrollLeft, scrollRight } from "../../utils/BtnScroll";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-
 function Banner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [movies, setMovies] = useState([]);
-  const rowRef = useRef(null);
 
   useEffect(() => {
     async function loadMovies() {
@@ -21,30 +19,43 @@ function Banner() {
     loadMovies();
   }, []);
 
+  useEffect(() => {
+    if (movies.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === movies.length - 1 ? 0 : prev + 1));
+    }, 9000);
+
+    return () => clearInterval(interval);
+  }, [movies]);
+
+  const currentMovie = movies[currentIndex];
+
   return (
-    <div className="container-banner" ref={rowRef}>
-      <h2>Movies highlights</h2>
+    <div className="banner-container">
+      {currentMovie && (
+        <Link to={`/filme/${currentMovie.id}`}>
+          <img
+            className="banner-img"
+            src={`http://image.tmdb.org/t/p/original/${currentMovie.backdrop_path}`}
+            alt={currentMovie.title}
+          />
+        </Link>
+      )}
 
-      <button className="arrow left" onClick={() => scrollLeft(rowRef)}> ◀ </button>
+      <div className="banner-title">
+        <h2>{currentMovie?.title}</h2>
+        
+        <p>{currentMovie?.overview}</p>
 
-      <button className="arrow right" onClick={() => scrollRight(rowRef)}> ▶ </button>
-
-      <div className="banner-posters">
-        {movies
-          //.filter((item) => item.vote_average > 8)
-          .map((item) => {
-            return (
-              <Link to={`/filme/${item.id}`} className="btn-acessar">
-                <div className="poster-item" key={item.id}>
-                <img
-                  className="banner-poster"
-                  src={`http://image.tmdb.org/t/p/w300/${item.poster_path}`}
-                  alt={item.title}
-                />
-                </div>
-              </Link>
-            );
-          })}
+        <a
+          className="btn-trailer"
+          target="_blank"
+          rel="external"
+          href={`https://www.youtube.com/results?search_query=${currentMovie?.title} trailer`}
+        >
+          Trailer
+        </a>
       </div>
     </div>
   );
