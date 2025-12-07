@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { GetAllMovies } from "../../services/movie";
 import { scrollLeft, scrollRight } from "../../utils/BtnScroll";
 
+
 function MovieRow() {
-  const [movies, setMovies] = useState([]);
   const rowRef = useRef(null);
+  const [movies, setMovies] = useState([]);
+
   
   useEffect(() => {
     async function loadMovies() {

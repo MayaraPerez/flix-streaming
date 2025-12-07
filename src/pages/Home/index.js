@@ -1,14 +1,13 @@
 import Banner from "../../components/Banner";
 import NavBar from "../../components/NavBar";
-import Filmes from "../../components/MovieRow"
-import './style.css';
+import MovieRow from "../../components/MovieRow";
 
 function Home () {
     return(
-        <div className="container">
+        <div>
            <NavBar /> 
             <Banner />
-            <Filmes />
+            <MovieRow />
         </div>
     )
 }
