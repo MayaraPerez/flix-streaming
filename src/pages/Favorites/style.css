@@ -1,0 +1,96 @@
+/* Container geral */
+.container-favorite {
+    width: 80%;
+    margin: 120px auto 0 auto;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  /* Título */
+  .container-favorite h2 {
+    font-size: 32px;
+    margin-bottom: 70px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Lista */
+  .container-favorite ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Cada item */
+  .container-favorite li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 14px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Efeito hover lindo */
+  .container-favorite li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Título do filme */
+  .container-favorite li span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  /* Área dos botões */
+  .actions {
+    display: flex;
+    gap: 14px;
+  }
+  
+  /* Link "Ver detalhes" */
+  .actions a {
+    color: #fff;
+    background: #ff004c;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+  
+    transition: background 0.2s ease;
+  }
+  
+  .actions a:hover {
+    background: #cc003e;
+  }
+  
+  /* Botão remover */
+  .actions button {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+  
+    transition: all 0.2s ease;
+  }
+  
+  .actions button:hover {
+    background: #ff4d4d;
+    color: white;
+  }
+  

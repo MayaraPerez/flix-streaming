@@ -1,19 +1,71 @@
-.container {
+/* ----------- CONTAINER GERAL ----------- */
+.movie-details-page {
+  margin-top: 20px; /* evita cobrir a NavBar */
   display: flex;
   justify-content: center;
+  gap: 60px;
+  padding: 40px;
+  width: 100%;
+}
+
+/* ----------- POSTER ----------- */
+.movie-poster img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ----------- ÁREA DE TEXTO ----------- */
+.movie-info {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.movie-year {
+  color: #bbbbbb;
+  font-size: 18px;
+}
+
+.movie-overview {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #dcdcdc;
+}
+
+/* ----------- CARDS DE ESTATÍSTICA ----------- */
+.movie-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.stat-card {
+  display: flex;
   align-items: center;
-  height: 100vh;        /* ESSENCIAL para centralizar verticalmente */
-  gap: 40px;
-}
-
-
-.poster-movie img {
-  width: 300px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 18px;
   border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-.details-movie {
-  max-width: 500px;
-  background-color: blue;
-  color: #000;
+.stat-icon {
+  width: 22px;
+  height: 22px;
+  filter: invert(80%) sepia(10%) saturate(200%);
+}
+
+.stat-card span {
+  color: #fff;
+  font-size: 16px;
 }
