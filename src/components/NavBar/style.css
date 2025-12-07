@@ -82,3 +82,7 @@
   opacity: 1;
   color: #ccc;
 }
+
+.link {
+  text-decoration: none;
+}

@@ -1,30 +1,24 @@
-import { handlerClick} from "../../utils/search";
+import { Link } from "react-router-dom";
+import { handlerClick } from "../../utils/search";
 import "./style.css";
 
 function NavBar() {
   return (
     <div className="container-itens">
-  
-      <div 
-        className="search"
-        onClick={handlerClick}
-      >
+      <div className="search" onClick={handlerClick}>
         <div className="search-icon"></div>
-  
-        <input 
-          type="text" 
-          className="search-input"
-          placeholder="Search..."
-        />
+
+        <input type="text" className="search-input" placeholder="Search..." />
       </div>
-  
-      <div className="item">Home</div>
-      <div className="item">Série</div>
-      <div className="item">Movie</div>
-      <div className="item">Favorite</div>
+
+      <Link className="link" to={"/"}>
+        <div className="item">Home</div>
+      </Link>
+      <Link className="link" to={"/favorites"}>
+        <div className="item">Favorite</div>
+      </Link>
     </div>
   );
-  
 }
 
 export default NavBar;

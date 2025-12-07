@@ -35,7 +35,7 @@ function Banner() {
   return (
     <div className="banner-container">
       {currentMovie && (
-        <Link to={`/filme/${currentMovie.id}`}>
+        <Link to={`/movie/${currentMovie.id}`}>
           <img
             className="banner-img"
             src={`http://image.tmdb.org/t/p/original/${currentMovie.backdrop_path}`}
