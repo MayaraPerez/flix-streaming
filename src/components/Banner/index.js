@@ -19,6 +19,7 @@ function Banner() {
     loadMovies();
   }, []);
 
+  // Scroll Dinamico
   useEffect(() => {
     if (movies.length === 0) return;
 
@@ -51,7 +52,7 @@ function Banner() {
         <a
           className="btn-trailer"
           target="_blank"
-          rel="external"
+          rel="external noreferrer"
           href={`https://www.youtube.com/results?search_query=${currentMovie?.title} trailer`}
         >
           Trailer

@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import NavBar from "../../components/NavBar";
-import Filmes from "../Filmes";
+import Filmes from "../../components/MovieRow"
 import './style.css';
 
 function Home () {
@@ -8,9 +8,8 @@ function Home () {
         <div className="container">
            <NavBar /> 
             <Banner />
-           <Filmes />
+            <Filmes />
         </div>
     )
 }
-
 export default Home;

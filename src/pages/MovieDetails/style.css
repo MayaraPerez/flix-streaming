@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;        /* ESSENCIAL para centralizar verticalmente */
+  gap: 40px;
+}
+
+
+.poster-movie img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.details-movie {
+  max-width: 500px;
+  background-color: blue;
+  color: #000;
+}

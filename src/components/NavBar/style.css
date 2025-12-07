@@ -19,11 +19,66 @@
   background-color: #cccccc28;
 }
 
+.container-itens {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  width: 5px;   
+  height: 5px;
+  padding: 5px;
+
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+  border: 1px solid transparent;
+}
+
+/* Ícone da lupa */
 .search-icon {
   width: 20px;
   height: 20px;
   background-image: url("https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  filter: grayscale(100%);
+  background-position: center;
+  flex-shrink: 0; /* evita que o ícone diminua */
+}
+
+/* Input escondido inicialmente */
+.search-input {
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  transition: all 0.4s ease;
+}
+
+/* Quando o usuário passa o mouse / clica */
+.search:hover,
+.search.active {
+  width: 200px;
+  height: 20px;
+  background-color: #93909028;
+  border: 1px solid #ccc;
+  
+}
+
+/* Input aparece suavemente */
+.search:hover .search-input,
+.search.active .search-input {
+  width: 150px;
+  opacity: 1;
+  color: #ccc;
 }

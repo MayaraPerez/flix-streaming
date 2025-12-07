@@ -4,7 +4,6 @@ import "./style.css";
 import { GetAllMovies } from "../../services/movie";
 import { scrollLeft, scrollRight } from "../../utils/BtnScroll";
 
-
 function MovieRow() {
   const [movies, setMovies] = useState([]);
   const rowRef = useRef(null);
@@ -33,8 +32,8 @@ function MovieRow() {
       </button>
 
       <div className="row-posters" ref={rowRef}>
-        {movies.map((item) => (
-          <Link to={`/filme/${item.id}`} className="btn-acessar">
+      {movies.map((item) => (
+          <Link to={`/movie/${item.id}`} className="btn-acessar">
             <div className="poster-item" key={item.id}>
               <img
                 className="row-poster"

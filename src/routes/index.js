@@ -9,7 +9,7 @@ function RouteApp() {
             <BrowserRouter>
              <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/movie/:id" element={<Filmes />} />
+                <Route path="/movie/:id" element={<Filmes />} /> 
                 <Route path="/favorites" element={<Favorite />} />
              </Routes>
             </BrowserRouter>
