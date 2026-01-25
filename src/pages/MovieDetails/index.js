@@ -3,6 +3,7 @@ import "./style.css";
 import { useParams } from "react-router-dom";
 import { GetAllMovies } from "../../services/movie";
 import NavBar from "../../components/NavBar";
+import { toast } from "react-toastify";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -33,12 +34,12 @@ function MovieDetails() {
     const hasFilmes = moviesSaved.some((moviesSaved) => moviesSaved.id === movie.id )
      
     if(hasFilmes){
-      alert('Esse Filme já esta na lista')
+      toast.info('Esse Filme já esta na lista')
       return
     }
     moviesSaved.push(movie)
     localStorage.setItem("@flixMovies", JSON.stringify(moviesSaved))
-    alert('Filme Salvo com sucesso')
+    toast.success('Filme Salvo com sucesso')
   
   }
 
