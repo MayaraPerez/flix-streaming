@@ -57,14 +57,13 @@
   border-radius: 12px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  
 }
 
-.stat-icon {
-  width: 22px;
-  height: 22px;
-  filter: invert(80%) sepia(10%) saturate(200%);
+.stat-icon{
+  width: 42px;
+  height: 42px;
 }
-
 .stat-card span {
   color: #fff;
   font-size: 16px;

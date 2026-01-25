@@ -1,9 +1,13 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import { GetAllMovies } from "../../services/movie";
 import NavBar from "../../components/NavBar";
 import { toast } from "react-toastify";
+import iconFavorit from "../../iconFavorit.png";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -27,20 +31,21 @@ function MovieDetails() {
   }
 
   function saveToFavorite() {
-    const myListMovie = localStorage.getItem('@flixMovies')
+    const myListMovie = localStorage.getItem("@flixMovies");
 
     let moviesSaved = JSON.parse(myListMovie) || [];
 
-    const hasFilmes = moviesSaved.some((moviesSaved) => moviesSaved.id === movie.id )
-     
-    if(hasFilmes){
-      toast.info('Esse Filme já esta na lista')
-      return
+    const hasFilmes = moviesSaved.some(
+      (moviesSaved) => moviesSaved.id === movie.id
+    );
+
+    if (hasFilmes) {
+      toast.info("Esse Filme já esta na lista");
+      return;
     }
-    moviesSaved.push(movie)
-    localStorage.setItem("@flixMovies", JSON.stringify(moviesSaved))
-    toast.success('Filme Salvo com sucesso')
-  
+    moviesSaved.push(movie);
+    localStorage.setItem("@flixMovies", JSON.stringify(moviesSaved));
+    toast.success("Filme Salvo com sucesso");
   }
 
   return (
@@ -90,18 +95,20 @@ function MovieDetails() {
                 target="_blank"
                 rel="external noreferrer"
                 href={`https://www.youtube.com/results?search_query=${movie.title} trailer`}
+                style={{textDecoration: 'none'}}
               >
                 <span>Trailer</span>
               </a>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" style={{gap:'0'}}>
               <img
                 className="stat-icon"
-                src=""
-                alt={`trailer ${movie.title}`}
+                src={iconFavorit}
                 onClick={() => saveToFavorite()}
+                alt={`trailer ${movie.title}`}
               />
-                <button onClick={saveToFavorite}>Salvar</button>
+
+              <a onClick={saveToFavorite}></a>
             </div>
           </div>
         </div>
