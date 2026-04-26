@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import "./style.css";
-import { GetAllMovies } from "../../services/movie";
+import { GetAllMovies } from "../../services/movies";
 import { scrollLeft, scrollRight } from "../../utils/BtnScroll";
 
 

@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 import { useParams } from "react-router-dom";
-import { GetAllMovies } from "../../services/movie";
+import { GetAllMovies } from "../../services/movies";
 import NavBar from "../../components/NavBar";
 import { toast } from "react-toastify";
 import iconFavorit from "../../iconFavorit.png";

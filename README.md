@@ -3,7 +3,6 @@
 ## Introdução — Flix Streaming
 
 O Flix Streaming é um projeto pessoal desenvolvido com o objetivo de aprimorar minhas habilidades em React e JavaScript, explorando tanto a construção de interfaces modernas quanto o desenvolvimento lógico de uma aplicação completa.
-
 A plataforma simula um serviço de streaming inspirado em grandes players do mercado, como Netflix, permitindo listar filmes, exibir banners dinâmicos, navegar por categorias e visualizar detalhes de cada título. Ao longo do desenvolvimento, busco reforçar conceitos essenciais do ecossistema React, como:
 
 ## Funcionalidades Implementadas
@@ -12,7 +11,6 @@ Home com banner dinâmico
 Listas em carrossel
 Página de Detalhes
 Sistema de Favoritos
-Busca global
 Páginas de filmes e séries
 Cadastro/Login (fake)
 UI responsiva
@@ -33,15 +31,14 @@ Boas práticas de UI/UX
 src/
   api/              isolamento de chamadas HTTP
   assets/           imagens, logos
-  components/       Componentes (Navbar, Card, banner, movieCard, movieRow)
-  pages/            Cada página separada (Home, Filmes, Favorites, MovieDetails)
+  components/       Componentes (Navbar, banner, movieRow, Footer)
+  pages/            Cada página separada (Home, User, Favorites, MovieDetails)
     Favorites/
-    Filmes/
     Home/
     MovieDetails/
   routes/           separa navegação
   services/         Pode guardar lógica (GetAllMovies)
-  utils/            Funções auxiliares (btnScroll, search)
+  utils/            Funções auxiliares (btnScroll, search, validação)
 aquivos raiz
 
 
@@ -53,15 +50,15 @@ Banner dinâmico com o filme de maior relevância
 com os filmes em alta
 
 - [x] Navbar fixa
-- [ ]Logo
+- [x]Logo
 - [x] Navegação: Home, Filmes, Séries, Favoritos
-- [ ]Campo de busca
+- [x]Campo de busca
 
 CADASTRO / LOGIN 
 
-- [ ] Página /login
-- [ ] Validações de campo
-- [ ] Persistência de usuário (localStorage)
+- [x] Página /login
+- [x] Validações de campo
+- [x] Persistência de usuário (SessionStorage)
 
 -----
 
@@ -70,7 +67,7 @@ CADASTRO / LOGIN
 BANNER : 
 - [x] Scroll horizontal de filmes
 - [ ] grid Reponsivo
-- [ ] redirecionar ao clickar no filme para pagina de detalhes
+- [x] redirecionar ao clickar no filme para pagina de detalhes
 
 AVANÇADOS
 - [ ] Filtros por gênero, ano e nota
@@ -80,19 +77,17 @@ AVANÇADOS
 - [ ] Mesma lógica que Filmes, porém separando o conteúdo da API.
 
 4️⃣ FAVORITOS
-- [ ] Salvamento de filmes via localStorage
-- [ ] Usuário pode adicionar/remover da pagina de favoritos
-- [ ] Lista com mini-card dos favoritos
+- [x] Salvamento de filmes via localStorage
+- [x] Usuário pode adicionar/remover da pagina de favoritos
+- [x] Lista com mini-card dos favoritos
 
 5️⃣ DETALHES DO FILME
 - [x] Banner com poster
 - [x] Título
-- [ ] Nota
+- [x] Nota
 - [x] Sinopse
 - [x] botão de trailer que redireciona (YouTube)
-- [ ] Botão “Adicionar aos Favoritos”
-- [x] scroll horizontal com setas de esquerda e direita
-
+- [x] Botão “Adicionar aos Favoritos”
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
