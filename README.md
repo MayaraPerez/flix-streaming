@@ -1,5 +1,104 @@
 # Getting Started with Create React App
 
+## Introdução — Flix Streaming
+
+O Flix Streaming é um projeto pessoal desenvolvido com o objetivo de aprimorar minhas habilidades em React e JavaScript, explorando tanto a construção de interfaces modernas quanto o desenvolvimento lógico de uma aplicação completa.
+A plataforma simula um serviço de streaming inspirado em grandes players do mercado, como Netflix, permitindo listar filmes, exibir banners dinâmicos, navegar por categorias e visualizar detalhes de cada título. Ao longo do desenvolvimento, busco reforçar conceitos essenciais do ecossistema React, como:
+
+## Funcionalidades Implementadas
+
+- Home com banner dinâmico
+- Filmes em carrossel
+- Página de Detalhes
+- Página de Favoritos
+- Páginas de filmes
+- Cadastro/Login (fake)
+- UI responsiva
+- Lupa de pesquisa
+
+## Visando melhorar o meu conhecimento em:
+
+Organização e arquitetura de pastas
+Componentização
+Hooks e estados
+Consumo de APIs externas
+Rotas e navegação
+Reutilização e desacoplamento de código
+Persistência no localStorage
+Boas práticas de UI/UX
+
+## 📁 Estrutura do Projeto
+
+```bash
+src/
+├── api/          # Isolamento de chamadas HTTP (configuração do axios, baseURL)
+├── assets/       # Imagens, logos e arquivos estáticos
+├── components/   # Componentes reutilizáveis (Navbar, Banner, MovieRow)
+├── pages/        # Páginas da aplicação (Home, User, Favorites, MovieDetails)
+├── routes/       # Configuração de rotas (React Router)
+├── services/     # Regras de negócio e consumo de APIs (movie.js, movies.js)
+├── utils/        # Funções auxiliares (scroll, validações, helpers)
+├── App.js        # Componente raiz da aplicação
+└── main.js       # Ponto de entrada
+```
+
+
+
+## Fluxo da Aplicação
+
+1️⃣ NAVBAR
+
+Banner dinâmico com o filme de maior relevância
+com os filmes em alta
+
+- [x] Navbar fixa
+- [x] Logo
+- [x] Navegação: Home, Favoritos
+- [x] Campo de busca
+
+CADASTRO / LOGIN 
+
+- [x] Página /login
+- [x] Validações de campo
+- [x] Persistência de usuário (SessionStorage)
+
+-----
+
+2️⃣ HOME
+
+BANNER : 
+- [x] Scroll horizontal de filmes
+- [ ] grid Reponsivo
+- [x] redirecionar ao clickar no filme para pagina de detalhes
+
+AVANÇADOS
+- [ ] Filtros por gênero, ano e nota
+
+3️⃣ SÉRIES
+- [ ] Mesma lógica que Filmes, porém separando o conteúdo da API.
+
+4️⃣ FAVORITOS
+- [x] Salvamento de filmes via localStorage
+- [x] Usuário pode adicionar/remover da pagina de favoritos
+- [x] Lista com mini-card dos favoritos
+
+5️⃣ DETALHES DO FILME
+- [x] Banner com poster
+- [x] Título
+- [x] Nota
+- [x] Sinopse
+- [x] botão de trailer que redireciona (YouTube)
+- [x] Botão “Adicionar aos Favoritos”
+
+
+
+## 🎬 Demo
+
+👉 [Assista à demo do projeto](https://drive.google.com/file/d/1YvyNBQe1N-bevJnmebIG2vV0NiZmt2AJ/view?usp=drive_link)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
