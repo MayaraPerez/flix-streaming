@@ -8,6 +8,5 @@ export async function GetAllMovies() {
     },
   });
 
-  //console.log(response.data.results)
   return response.data.results;
 }
