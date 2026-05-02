@@ -7,14 +7,13 @@ A plataforma simula um serviço de streaming inspirado em grandes players do mer
 
 ## Funcionalidades Implementadas
 
-- Home com banner dinâmico
-- Filmes em carrossel
-- Página de Detalhes
-- Página de Favoritos
-- Páginas de filmes
-- Cadastro/Login (fake)
-- UI responsiva
-- Lupa de pesquisa
+Home com banner dinâmico
+Listas em carrossel
+Página de Detalhes
+Sistema de Favoritos
+Páginas de filmes e séries
+Cadastro/Login (fake)
+UI responsiva
 
 ## Visando melhorar o meu conhecimento em:
 
@@ -27,21 +26,30 @@ Reutilização e desacoplamento de código
 Persistência no localStorage
 Boas práticas de UI/UX
 
-## 📁 Estrutura do Projeto
+### Tecnologias Utilizadas
 
-```bash
+- **React**: Biblioteca principal para construção da interface.
+- **React Router**: Para navegação entre as páginas.
+- **JavaScript (ES6+)**: Linguagem principal do projeto.
+- **CSS**: Para estilização personalizada.
+- **Axios**: Para realizar chamadas à API.
+- **TMDB API**: Fonte de dados sobre filmes.
+
+
+# Seguira essa Estrutura pastas
+
 src/
-├── api/          # Isolamento de chamadas HTTP (configuração do axios, baseURL)
-├── assets/       # Imagens, logos e arquivos estáticos
-├── components/   # Componentes reutilizáveis (Navbar, Banner, MovieRow)
-├── pages/        # Páginas da aplicação (Home, User, Favorites, MovieDetails)
-├── routes/       # Configuração de rotas (React Router)
-├── services/     # Regras de negócio e consumo de APIs (movie.js, movies.js)
-├── utils/        # Funções auxiliares (scroll, validações, helpers)
-├── App.js        # Componente raiz da aplicação
-└── main.js       # Ponto de entrada
-```
-
+  api/              isolamento de chamadas HTTP
+  assets/           imagens, logos
+  components/       Componentes (Navbar, banner, movieRow, Footer)
+  pages/            Cada página separada (Home, User, Favorites, MovieDetails)
+    Favorites/
+    Home/
+    MovieDetails/
+  routes/           separa navegação
+  services/         Pode guardar lógica (GetAllMovies)
+  utils/            Funções auxiliares (btnScroll, search, validação)
+aquivos raiz
 
 
 ## Fluxo da Aplicação
@@ -52,9 +60,9 @@ Banner dinâmico com o filme de maior relevância
 com os filmes em alta
 
 - [x] Navbar fixa
-- [x] Logo
-- [x] Navegação: Home, Favoritos
-- [x] Campo de busca
+- [x]Logo
+- [x] Navegação: Home, Filmes, Séries, Favoritos
+- [x]Campo de busca
 
 CADASTRO / LOGIN 
 
@@ -74,6 +82,7 @@ BANNER :
 AVANÇADOS
 - [ ] Filtros por gênero, ano e nota
 
+
 3️⃣ SÉRIES
 - [ ] Mesma lógica que Filmes, porém separando o conteúdo da API.
 
@@ -90,80 +99,35 @@ AVANÇADOS
 - [x] botão de trailer que redireciona (YouTube)
 - [x] Botão “Adicionar aos Favoritos”
 
-
-
 ## 🎬 Demo
-
 👉 [Assista à demo do projeto](https://drive.google.com/file/d/1YvyNBQe1N-bevJnmebIG2vV0NiZmt2AJ/view?usp=drive_link)
 
 
+### Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Crie um arquivo .env na raiz do projeto e adicione sua chave da API do TMDB:
+   ```
+   REACT_APP_API_KEY=seu_api_key_aqui
+   ```
+5. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+
+---
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
