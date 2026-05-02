@@ -28,7 +28,7 @@ function StreamingForm() {
             value={FormValidation.password}
             onChange={FormValidation.handlePasswordChange}
             onFocus={() => FormValidation.setShowInfo(true)}
-            disabled={FormValidation.emailError}
+            disabled={!FormValidation.isEmailValid}
           />
 
           {FormValidation.showInfo && (
