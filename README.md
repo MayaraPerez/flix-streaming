@@ -38,6 +38,7 @@ Boas práticas de UI/UX
 
 # Seguira essa Estrutura pastas
 
+```
 src/
   api/              isolamento de chamadas HTTP
   assets/           imagens, logos
@@ -50,7 +51,7 @@ src/
   services/         Pode guardar lógica (GetAllMovies)
   utils/            Funções auxiliares (btnScroll, search, validação)
 aquivos raiz
-
+```
 
 ## Fluxo da Aplicação
 
